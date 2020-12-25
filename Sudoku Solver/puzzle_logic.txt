@@ -1,0 +1,74 @@
+8 4 7 9 5 0 1 0 3 
+0 0 0 7 0 8 5 4 6
+0 0 6 0 3 1 0 0 0 
+2 3 0 0 0 0 0 0 0
+0 7 0 0 0 0 0 1 0
+0 0 0 0 0 0 0 8 5
+0 0 0 8 9 0 6 0 0
+6 9 1 5 0 7 0 0 0
+7 0 3 0 1 2 9 5 4
+------------------
+1st_col
+00
+10
+20
+30
+40
+
+
+
+-------------
+0-3/0-3 -1st
+3-6/0-3 -2nd
+6-9/0-3 -3rd
+-----------
+0-3/3-6 -4th
+3-6/3-6 -5th
+6-9/3-6 -6th
+-------------
+0-3/6-9 -7th
+3-6/6-9 -8th
+6-9/6-9 -9th
+
+[1][0] - 1st
+[8][1] - 7th
+[6][0] - 7th
+[6][7]- 9th
+
+7//3 = 2*3 = 6, 9
+6//3 = 2*3 = 6, 9
+
+col
+row
+for x in range(col, col+3):
+    for y in range(row, row+3):
+	if num == puzzle[x][y]:
+	    return False
+
+
+
+
+1st_empty = [0][5]-> row, col
+for x in puzzle[row]:
+    if x == num:
+        return False
+
+col = []
+for x range(9):
+    col.append(puzzle[x][col])
+if num in col:
+    return False
+
+
+  3 - 4 - 5
+0 03  04  05
+|
+1 13  14  15
+|
+2 23  24  25
+ 
+x = row//3 * 3
+
+y = col//3 * 3
+
+for x in range(
