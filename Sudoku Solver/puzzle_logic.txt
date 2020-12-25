@@ -70,5 +70,3 @@ if num in col:
 x = row//3 * 3
 
 y = col//3 * 3
-
-for x in range(
